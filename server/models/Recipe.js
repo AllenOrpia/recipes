@@ -1,23 +1,23 @@
 const mongoose = require('mongoose');
-const Schema = new mongoose.Schema
+const Schema = mongoose.Schema
 
 const recipeSchema = new Schema({
-    name : {
+    name: {
         type: String,
-        required : [true, 'Recipe name cannot be blank!'],
-        minlength: [3, 'Recipe name must be atleast 3 characters']
+        required: [true, 'Recipe name cannot be blank!'],
+        
     },
-    description : {
+    description: {
         type: String,
-        required : [true, 'Description cannot be blank!'],
-        minlength: [3, 'Recipe description must be atleast 3 characters']
+        required: [true, 'Description cannot be blank!'],
+        
     },
-    instructions : {
+    instructions: {
         type: String,
-        required : [true, 'Instructions cannot be blank!'],
-        minlength: [3, 'Recipe instruction must be atleast 3 characters']
+        required: [true, 'Instructions cannot be blank!'],
+        
     },
-    cookTime : {
+    cookTime: {
         type: Number,
         required: [true, 'You must enter a cook time!']
     }
